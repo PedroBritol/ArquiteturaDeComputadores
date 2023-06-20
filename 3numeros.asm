@@ -17,9 +17,6 @@
 .end_macro
 
 .macro input(%str)
-	.data
-		msg: .asciiz %str
-	.text
 		printf(%str)
 		li $v0, 5
 		syscall
@@ -48,6 +45,4 @@ encerrar
 L3 : printf("Todos os numeros sao iguais")
 encerrar 
 
-
-encerrar
 
